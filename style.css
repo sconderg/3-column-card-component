@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: hsl(0, 0%, 95%);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: center;
+  margin: 120px auto;
+}
+
+.container .box {
+  padding: 3em;
+  flex-basis: calc(80% / 3);
+}
+.container .box:first-of-type {
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.container .box:nth-child(2) {
+  background-color: hsl(184, 100%, 22%);
+}
+.container .box:last-of-type {
+  background-color: hsl(179, 100%, 13%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.container .box h2 {
+  color: hsl(0, 0%, 95%);
+  font-family: "Big Shoulders Display", cursive;
+  margin: 1em 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.container .box p {
+  font-size: 14px;
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 5em;
+  line-height: 1.8;
+}
+
+.container .box a {
+  text-decoration: none;
+  display: inline-block;
+  background-color: hsl(0, 0%, 95%);
+  border: 1px solid hsl(0, 0%, 95%);
+  padding: 1em;
+  font-size: 15px;
+  border-radius: 25px;
+  transition: 0.3s ease-in-out;
+}
+.container .box:first-of-type a {
+  color: hsl(31, 77%, 52%);
+}
+.container .box:nth-child(2) a {
+  color: hsl(184, 100%, 22%);
+}
+.container .box:last-of-type a {
+  color: hsl(179, 100%, 13%);
+}
+.container .box a:hover {
+  background-color: transparent;
+  color: hsl(0, 0%, 95%);
+}
+
+@media (max-width: 767px) {
+  .container .box {
+    flex-basis: 100%;
+  }
+  .container .box:first-of-type {
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .container .box:last-of-type {
+    border-radius: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
